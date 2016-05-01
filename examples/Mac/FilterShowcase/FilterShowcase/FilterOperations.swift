@@ -1159,6 +1159,34 @@ let filterOperations: Array<FilterOperationInterface> = [
         sliderUpdateCallback:nil,
         filterOperationType:.Blend
     ),
+    FilterOperation(
+        filter:{AlphaBlend()},
+        listName:"Geometry Object Overlay",
+        titleName:"Geometry Object Overlay",
+        sliderConfiguration:.Enabled(minimumValue:0.0, maximumValue:1.0, initialValue:0.25),
+        sliderUpdateCallback: {(filter, sliderValue) in
+           filter.mix = sliderValue
+        },
+        filterOperationType:.Custom(filterSetupFunction:{(camera, filter, outputView) in
+            let castFilter = filter as! AlphaBlend
+            
+            let rectangleGenerator = GeometryItemGenerator(size:outputView.sizeInPixels)
+            
+            let operationGroup = FrameBufferTickOperationGroup()
+            operationGroup.configureGroup( {(input, output) in // Chain the filters -> just blend camera with the rectangle
+                input --> castFilter --> output
+                rectangleGenerator --> castFilter
+            })
+            operationGroup.newFrameAvaialableTick = { // Each time the input changes generate a new rectangle on the frame
+                let side: Float = 0.25
+                let rect = Rectangle(leftBottom: Point(x: -side,y: -side), rightBottom: Point(x: side,y: -side), topRight: Point(x: side, y: side), leftTop: Point(x: -side, y: side))
+                rectangleGenerator.renderGeometryItem(rect)
+            }
+            
+            camera --> operationGroup --> outputView
+            return operationGroup
+        })
+    )
     
     // TODO: Poisson blend
 ]

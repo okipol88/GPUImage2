@@ -179,6 +179,7 @@
 		BCFF46FE1CBB0C1F00A0C521 /* AverageColorExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF46FD1CBB0C1F00A0C521 /* AverageColorExtractor.swift */; };
 		BCFF47081CBB443B00A0C521 /* CameraConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF47071CBB443B00A0C521 /* CameraConversion.swift */; };
 		CE7875191CD5FEC4002EA409 /* GeometryItemGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7875181CD5FEC4002EA409 /* GeometryItemGenerator.swift */; };
+		CE78751D1CD608E0002EA409 /* FrameBufferTickOperationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78751C1CD608E0002EA409 /* FrameBufferTickOperationGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -492,6 +493,7 @@
 		BCFF47001CBB0D8900A0C521 /* AverageColor.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = AverageColor.vsh; path = Source/Operations/Shaders/AverageColor.vsh; sourceTree = "<group>"; };
 		BCFF47071CBB443B00A0C521 /* CameraConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraConversion.swift; path = Source/CameraConversion.swift; sourceTree = "<group>"; };
 		CE7875181CD5FEC4002EA409 /* GeometryItemGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeometryItemGenerator.swift; path = Source/Operations/GeometryItemGenerator.swift; sourceTree = "<group>"; };
+		CE78751C1CD608E0002EA409 /* FrameBufferTickOperationGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrameBufferTickOperationGroup.swift; path = Source/Operations/FrameBufferTickOperationGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -877,6 +879,7 @@
 				BC7FD1A41CB2160B00037949 /* CircleGenerator.swift */,
 				BC7FD1A81CB21D3C00037949 /* Circle.vsh */,
 				BC7FD1A61CB219C000037949 /* Circle_GL.fsh */,
+				CE7875181CD5FEC4002EA409 /* GeometryItemGenerator.swift */,
 				BC4EE16B1CB34D7B00AD8A65 /* RawDataInput.swift */,
 				BCFB07911CBF37A1009B2333 /* TextureInput.swift */,
 			);
@@ -899,7 +902,6 @@
 		BCD1B1461C66A8A7001F2BDC /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				CE7875181CD5FEC4002EA409 /* GeometryItemGenerator.swift */,
 				BCB279E71C8D0BA30013E213 /* BasicOperation.swift */,
 				BC91EDCE1C91E92000C704A8 /* OneInput.vsh */,
 				BC1E12F51C9F2FD7008F844F /* TwoInput.vsh */,
@@ -911,6 +913,7 @@
 				BCFF46EB1CBAF78D00A0C521 /* NearbyTexelSampling.vsh */,
 				BC8B7A8C1CB5A6C500ACF7AA /* TwoStageOperation.swift */,
 				BCFF46A51CB7428C00A0C521 /* OperationGroup.swift */,
+				CE78751C1CD608E0002EA409 /* FrameBufferTickOperationGroup.swift */,
 				BC4C85F31C9F114600FD95D8 /* Color processing */,
 				BC4EE14A1CB33BBF00AD8A65 /* Image processing */,
 				BC7FD0A91CA76F9F00037949 /* Effects */,
@@ -1127,6 +1130,7 @@
 				BC7FD0BD1CA77A9300037949 /* KuwaharaFilter.swift in Sources */,
 				BC77295C1CB30CD2004C9E0B /* TextureSamplingOperation.swift in Sources */,
 				BC1E13291C9F6282008F844F /* PictureInput.swift in Sources */,
+				CE78751D1CD608E0002EA409 /* FrameBufferTickOperationGroup.swift in Sources */,
 				BC7FD10E1CB0783500037949 /* ExclusionBlend.swift in Sources */,
 				BCBEC0E01CCD492D00B70ED7 /* HistogramEqualization.swift in Sources */,
 				BC7FD0F91CB063B700037949 /* Color.swift in Sources */,
