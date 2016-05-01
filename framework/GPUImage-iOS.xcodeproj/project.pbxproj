@@ -167,6 +167,7 @@
 		BCFB074C1CBF2BC1009B2333 /* ZoomBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB073E1CBF2BC1009B2333 /* ZoomBlur.swift */; };
 		BCFB07991CBF4B44009B2333 /* TextureInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB07981CBF4B44009B2333 /* TextureInput.swift */; };
 		BCFB079C1CBF4B92009B2333 /* TextureOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFB079B1CBF4B92009B2333 /* TextureOutput.swift */; };
+		CE7875171CD5FEA0002EA409 /* GeometryItemGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7875161CD5FEA0002EA409 /* GeometryItemGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -477,6 +478,7 @@
 		BCFB079B1CBF4B92009B2333 /* TextureOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextureOutput.swift; path = Source/TextureOutput.swift; sourceTree = "<group>"; };
 		BCFB079D1CBF4E39009B2333 /* FiveInput.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = FiveInput.vsh; path = Source/Operations/Shaders/FiveInput.vsh; sourceTree = "<group>"; };
 		BCFB079E1CBF4E39009B2333 /* FourInput.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = FourInput.vsh; path = Source/Operations/Shaders/FourInput.vsh; sourceTree = "<group>"; };
+		CE7875161CD5FEA0002EA409 /* GeometryItemGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeometryItemGenerator.swift; path = Source/Operations/GeometryItemGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -614,6 +616,7 @@
 		BCE316F01CA0E63D00323D5B /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				CE7875161CD5FEA0002EA409 /* GeometryItemGenerator.swift */,
 				BCE317011CA0E6C300323D5B /* BasicOperation.swift */,
 				BCFB05C71CBF1E84009B2333 /* OneInput.vsh */,
 				BCFB05C91CBF1E84009B2333 /* TwoInput.vsh */,
@@ -1078,6 +1081,7 @@
 				BCFB068A1CBF22F2009B2333 /* AverageLuminanceThreshold.swift in Sources */,
 				BCFB066C1CBF223D009B2333 /* LookupFilter.swift in Sources */,
 				BCFB05FF1CBF1FF8009B2333 /* DissolveBlend.swift in Sources */,
+				CE7875171CD5FEA0002EA409 /* GeometryItemGenerator.swift in Sources */,
 				BCE316FC1CA0E69800323D5B /* OpenGLContext_Shared.swift in Sources */,
 				BCFB06A41CBF284A009B2333 /* ChromaKeying.swift in Sources */,
 				BCFB07271CBF2B94009B2333 /* CGAColorspaceFilter.swift in Sources */,
